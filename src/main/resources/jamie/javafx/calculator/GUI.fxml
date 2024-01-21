@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="jamie.javafx.calculator.Controller">
+    <AnchorPane prefHeight="60.0" prefWidth="235.0" style="-fx-background-color: white;">
+        <Label fx:id="lblFormula" alignment="CENTER" prefHeight="20.0" prefWidth="235.0" textFill="#6b6a6a">
+            <font>
+                <Font size="11.0"/>
+            </font>
+            <padding>
+                <Insets left="5.0" right="5.0"/>
+            </padding>
+        </Label>
+        <Label fx:id="lblDisplay" alignment="CENTER_RIGHT" layoutY="20.0" prefHeight="40.0" prefWidth="235.0">
+            <font>
+                <Font size="18.0"/>
+            </font>
+            <padding>
+                <Insets left="5.0" right="5.0"/>
+            </padding>
+        </Label>
+        <effect>
+            <InnerShadow/>
+        </effect>
+    </AnchorPane>
+    <GridPane hgap="5" prefHeight="280.0" prefWidth="225.0" vgap="5" VBox.vgrow="NEVER">
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="7" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="8" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="9" GridPane.columnIndex="2" GridPane.rowIndex="0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="4" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="1" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processUnaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="+/-" textFill="#4169e1" GridPane.columnIndex="0" GridPane.rowIndex="3">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processNumber" prefHeight="50.0" prefWidth="50.0"
+                text="." GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#clearAll" prefHeight="50.0" prefWidth="50.0"
+                text="Clear" textFill="#4169e1" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <Button onAction="#delete" prefHeight="50.0" prefWidth="50.0"
+                text="Del" textFill="#4169e1" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+        <Button onAction="#doCalculation" prefHeight="50.0" prefWidth="50.0"
+                text="=" textFill="#4169e1" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processBinaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="+" textFill="#4169e1" GridPane.columnIndex="3" GridPane.rowIndex="0">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processBinaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="-" textFill="#4169e1" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processBinaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="*" textFill="#4169e1" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processBinaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="÷" textFill="#4169e1" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <Button onAction="#processUnaryOperator" prefHeight="50.0" prefWidth="50.0"
+                text="√" textFill="#4169e1" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Button>
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+        <padding>
+            <Insets bottom="5.0" left="10.0" top="5.0"/>
+        </padding>
+    </GridPane>
+</VBox>
