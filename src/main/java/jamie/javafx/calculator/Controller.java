@@ -56,7 +56,6 @@ public class Controller implements Initializable {
     @FXML
     public void clearAll() {
 
-        //TODO
         setDisplay(""); //Clears Display Label
         setFormula(""); //Clears Formula Label
         model.reset(); //Resets Current and previous operands, and operator values to empty.
@@ -68,7 +67,6 @@ public class Controller implements Initializable {
     @FXML
     public void delete() {
 
-        //TODO
         if(isAnswerState()){
             clearAll();
         } else {
@@ -86,7 +84,6 @@ public class Controller implements Initializable {
     @FXML
     public void processNumber(ActionEvent event) {
 
-        //TODO
         if(isErrorState()){ // If in error state, clears the display label.
             delete();
         }
@@ -126,7 +123,6 @@ public class Controller implements Initializable {
     @FXML
     public void processBinaryOperator(ActionEvent event) {
 
-        //TODO
         if(!isDisplayEmpty() && isCurrentOperandPresent()){ // Check to see an operand has been entered in the display.
             String btnText = getBtnText(event);
             String operandString = operandToString(model.getCurrentOperand());
@@ -156,7 +152,6 @@ public class Controller implements Initializable {
     @FXML
     public void processUnaryOperator(ActionEvent event) {
 
-        //TODO
         if(isCurrentOperandPresent() && model.getCurrentOperand().getAsDouble() != 0.0){ // Check to see if the operand is present, and not 0.
             if(model.getCurrentOperand().getAsDouble() < 0.0 && getBtnText(event).equals("√")){ // Check to see if the operand is a negative number and if the square root button was pressed.
                 System.out.println("Invalid Action: Cannot square root a negative number!");
@@ -181,7 +176,6 @@ public class Controller implements Initializable {
     @FXML
     public void doCalculation() {
 
-        //TODO
         if(!isFormulaEmpty() && isPreviousOperandPresent() && isCurrentOperandPresent() && !isErrorState()){ // Check to ensure the calculator is in the correct state.
             if(operandToString(model.getCurrentOperand()).equals("0") && model.getOperator().equals("÷")){ // Check to see if the calculation is dividing a number by 0.
                 delete();

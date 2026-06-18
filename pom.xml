@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>kent.co871.a2calculator/kent.co871.a2calculator.HelloApplication</mainClass>
+                            <mainClass>kent.co871.a2calculator/jamie.javafx.calculator.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
